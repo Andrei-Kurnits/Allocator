@@ -1,0 +1,19 @@
+#ifndef ALLOCATOR_H
+#define ALLOCATOR_H
+
+// Config parameters from Cmake
+#define ALLOCATOR_PAGE_SIZE @PAGE_SIZE@ /* Page size in bytes */
+#define ALLOCATOR_POOL_SIZE @POOL_SIZE@ /* Pool size in pages */
+
+// Error codes
+#define ALLOCATOR_NO_ERROR 0
+#define ALLOCATOR_ERROR_NO_FREE_PAGES 1
+#define ALLOCATOR_ERROR_NOT_ALIGNED 2
+#define ALLOCATOR_ERROR_BAD_ADDRESS 3
+#define ALLOCATOR_ERROR_INTERNAL 4
+
+void AllocatorInit(void);
+void* AllocatorAlloc(int* result);
+int AllocatorDealloc(void* ptr);
+
+#endif // ifndef ALLOCATOR_H

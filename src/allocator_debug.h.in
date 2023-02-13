@@ -1,0 +1,11 @@
+#ifndef ALLOCATOR_DEBUG_H
+#define ALLOCATOR_DEBUG_H
+
+#cmakedefine ALLOCATOR_DEBUG @ALLOCATOR_DEBUG @
+
+#ifdef ALLOCATOR_DEBUG
+int AllocatorDebugCountFreePages(void);
+void* AllocatorDebugGetPoolBaseAdress(void);
+#endif // ifdef ALLOCATOR_DEBUG
+
+#endif // ifndef ALLOCATOR_DEBUG_H
