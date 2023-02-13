@@ -16,6 +16,7 @@ Once: *cd allocator && mkdir build && cd build*
 
 ### How to set pool size and page size?
 Using CMake definitions: *cmake -DPAGE_SIZE=128 -DPOOL_SIZE=128*
+*Attention!*
 POOL_SIZE is a number of pages!
 
 ### Which build types are supported?
@@ -42,15 +43,15 @@ cmake -DPAGE_SIZE=128 -DPOOL_SIZE=128 -DCMAKE_BUILD_TYPE=Test -DBUILD_NUMBER=ABC
 ./test/AllocatorUnitTests
 
 ### Expected result
-[==========] Running 4 test(s).
-[ RUN      ] testSimpleAllocation
-[       OK ] testSimpleAllocation
-[ RUN      ] testCountFreePagesLeft
-[       OK ] testCountFreePagesLeft
-[ RUN      ] testAllPagesAllocated
-[       OK ] testAllPagesAllocated
-[ RUN      ] testBadAddress
-[       OK ] testBadAddress
-[==========] 4 test(s) run.
-[  PASSED  ] 4 test(s).
+- [==========] Running 4 test(s).
+- [ RUN      ] testSimpleAllocation
+- [       OK ] testSimpleAllocation
+- [ RUN      ] testCountFreePagesLeft
+- [       OK ] testCountFreePagesLeft
+- [ RUN      ] testAllPagesAllocated
+- [       OK ] testAllPagesAllocated
+- [ RUN      ] testBadAddress
+- [       OK ] testBadAddress
+- [==========] 4 test(s) run.
+- [  PASSED  ] 4 test(s).
 

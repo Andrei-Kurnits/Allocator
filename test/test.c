@@ -1,10 +1,13 @@
+// clang-format off
 #include "allocator.h"
 #include "allocator_debug.h"
-#include "cmocka.h"
 #include "port.h"
 #include <setjmp.h>
 #include <stdarg.h>
 #include <stddef.h>
+#include <stdarg.h>
+#include "cmocka.h"
+// clang-format on
 
 // Mocks for port funcions:
 void allocatorPortInit(void)

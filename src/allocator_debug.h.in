@@ -1,7 +1,7 @@
 #ifndef ALLOCATOR_DEBUG_H
 #define ALLOCATOR_DEBUG_H
 
-#cmakedefine ALLOCATOR_DEBUG @ALLOCATOR_DEBUG @
+#cmakedefine ALLOCATOR_DEBUG @ALLOCATOR_DEBUG@
 
 #ifdef ALLOCATOR_DEBUG
 int AllocatorDebugCountFreePages(void);

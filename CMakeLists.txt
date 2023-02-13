@@ -24,12 +24,12 @@ endif()
 # Add debug/test functions
 if(${CMAKE_BUILD_TYPE} MATCHES "Debug|Test")
     set(ALLOCATOR_DEBUG 1)
-    set(DEBUG_HEADER ${CMAKE_BINARY_DIR}/allocator_debug.h)
-    configure_file(
-        ${CMAKE_SOURCE_DIR}/src/allocator_debug.h.in
-        ${DEBUG_HEADER}
-    )
 endif()
+set(DEBUG_HEADER ${CMAKE_BINARY_DIR}/allocator_debug.h)
+configure_file(
+    ${CMAKE_SOURCE_DIR}/src/allocator_debug.h.in
+    ${DEBUG_HEADER}
+)
 
 # Provide given configuration to sources
 set(PUBLIC_HEADER ${CMAKE_BINARY_DIR}/allocator.h)
