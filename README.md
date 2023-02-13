@@ -11,8 +11,9 @@ On host machine the following should be installed:
 Once: *cd allocator && mkdir build && cd build*
 
 1. cmake -DCMAKE_TOOLCHAIN_FILE=../toolchains/arm.cmake -DPORT=FreeRTOS -DPAGE_SIZE=128 -DPOOL_SIZE=128 -DCMAKE_BUILD_TYPE=Debug -DBUILD_NUMBER=ABCD1234 .. && make
-2. cmake -DPAGE_SIZE=128 -DPOOL_SIZE=128 -DCMAKE_BUILD_TYPE=Test -DBUILD_NUMBER=ABCD1234 .. && make
-
+2. rm -rf ./*
+3. cmake -DPAGE_SIZE=128 -DPOOL_SIZE=128 -DCMAKE_BUILD_TYPE=Test -DBUILD_NUMBER=ABCD1234 .. && make
+4. ...
 
 ### How to set pool size and page size?
 Using CMake definitions: *cmake -DPAGE_SIZE=128 -DPOOL_SIZE=128*
